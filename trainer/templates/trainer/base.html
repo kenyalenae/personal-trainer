@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'trainer/main.css' %}">
+
+  {% if title %}
+    <title>KLM Fitness - {{ title }}</title>
+  {% else %}
+    <title>KLM Fitness</title>
+  {% endif %}
+</head>
+
+<body>
+  {# NAVIGATION BAR #}
+  <div id="topheader">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'trainer-home' %}">KLM Training</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+          {% if user.is_authenticated %}
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'account-home' %}">Home</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'email' %}">Contact</a></li>
+            <li><a href="{% url 'workout-program' %}">Workout Program</a></li>
+            <li><a href="{% url 'meal-plan' %}">Meal Plan</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          </ul>
+          {% else %}
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'trainer-about' %}">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+          </ul>
+          {% endif %}
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+  </div>
+
+    <main role="main" class="container">
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+{% extends 'trainer/base.html' %}
+{% block content %}
+
+  {# HEADER SECTION #}
+  <div class="jumbotron jumbotron-fluid text-center" id="homeJumbotron">
+    <div class="container-fluid">
+      <h1>KLM Personal Training</h1>
+      <p class="highlight">Live your best life!</p>
+    </div>
+  </div>
+
+  {# VALUES SECTION #}
+  <div class="container-fluid text-center">
+    <h2>Why work with KLM Training?</h2>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-star-empty"></span>
+        <h4>Accountability</h4>
+        <p>Our trainers will hold you accountable for your actions, no more skipping the gym.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-ok"></span>
+        <h4>Guidance</h4>
+        <p>At KLM Fitness, our trainers will provide the guidance you need to succeed.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-usd"></span>
+        <h4>Payment Plans</h4>
+        <p>Clients have the ability to sign up for a payment plan and pay weekly or bi-weekly.</p>
+      </div>
+    </div>
+      <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-thumbs-up"></span>
+        <h4>Motivation</h4>
+        <p>A lot of people lose motivation and don't finish their goals. At KLM Fitness, we can help with that.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-education"></span>
+        <h4>Certification</h4>
+        <p>All of our trainers have gone through schooling for exercise science and have the knowledge needed
+        to help you achieve your goals.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-scale"></span>
+        <h4>Results</h4>
+        <p>If you work with us and follow our guidance, we can guarantee you'll see results.</p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  {# TESTIMONIALS SECTION #}
+  <div id="testimonials" class="text-center">
+    <h2>WHAT CLIENTS ARE SAYING...</h2>
+    <br>
+    <p>KLM Fitness has shown me that you're never too old to participate in fitness! I'm in my 60's and feel
+    healthier than I was in my 20's. -Sharon C.</p>
+    <br>
+    <p>I started training with KLM Fitness in May 2016. I have lost 100+ lbs and have gained a whole lot of strength.
+    There is no doubt in my mind that would not be possible if I wasn't training with KLM Fitness. -Josh P.</p>
+    <br>
+    <p>I needed help gaining weight and adding muscle mass to my body and KLM Fitness was there for me when I
+    was struggling. They held me accountable and made sure that I stuck to the plan. With their help, I have the
+    body of my dreams and I would recommend them to anyone! -Michael J.</p>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  {# PRICING SECTION #}
+  <div id="pricing">
+    <div class="text-center">
+      <h2>YOUR JOURNEY STARTS HERE</h2>
+      <h4>Choose a program that works for you</h4>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Basic</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>8</strong> Sessions per Month</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$100</h3>
+            <h4>per month</h4>
+            <a href="{% url 'register' %}" class="btn btn-lg" role="button">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Pro</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>16</strong> Sessions per Month</p>
+            <p><strong>Free</strong> Diet program</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$200</h3>
+            <h4>per month</h4>
+            <a href="{% url 'register' %}" class="btn btn-lg" role="button">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Premium</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>20</strong> Sessions per Month</p>
+            <p><strong>Free</strong> Diet program</p>
+            <p><strong>20%</strong> Off all supplements</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$300</h3>
+            <h4>per month</h4>
+            <a href="{% url 'register' %}" class="btn btn-lg" role="button">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  {# CONTACT SECTION #}
+  <div class="contact container-fluid">
+    <h2 class="text-center">CONTACT US</h2>
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="text-center">Contact us and we'll get back to you within 24 hours.</p>
+          <p class="text-center"><span class="glyphicon glyphicon-map-marker"></span> Maple Grove, MN</p>
+          <p class="text-center"><span class="glyphicon glyphicon-phone"></span> (123)456-7890</p>
+          <p class="text-center"><span class="glyphicon glyphicon-envelope"></span> KLMFitness@company.com</p>
+          <p class="text-center"><a href="{% url 'email' %}" class="btn btn-primary">Ask Us!</a></p>
+        </div>
+      </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  {# FOOTER SECTION #}
+  <div id="footer" class="container-fluid">
+    <a href="https://github.com/kenyalenae" target="blank" class="icon-btn github-icn"><i class="fa fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/klmayieka/" target="blank" class="icon-btn linkedin-icn"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/kenyalenae/" target="blank" class="icon-btn instagram-icn"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.facebook.com/kenya.mayieka" target="blank" class="icon-btn facebook-icn"><i class="fa fa-facebook"></i></a>
+    <br><br>
+    <p>COPYRIGHT © 2018 KENYA MAYIEKA</p>
+  </div>
+
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+
+{% endblock content %}
